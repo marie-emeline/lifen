@@ -89,7 +89,7 @@ class Upload extends Component {
               </div>
               {loading ? 
                 (
-                  <img className="Upload-spinner" src={spinner} />
+                  <img className="Upload-spinner" src={spinner} alt="spinner" />
                 )
                 :
                 (
