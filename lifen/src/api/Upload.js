@@ -1,6 +1,6 @@
-export const fetchUpload = async () => {
+export const fetchUpload = async file => {
   const url = new URL(
-     'https://hapi.fhir.org/baseDstu3/Binary?_pretty=true',
+     'https://fhirtest.uhn.ca/baseDstu3/Binary',
   );
 
   const response = await fetch(url.href, {

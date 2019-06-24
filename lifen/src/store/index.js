@@ -6,6 +6,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { Map, fromJS } from 'immutable';
 import { createBrowserHistory } from 'history';
 
+import { loadState, saveState } from '../helpers/localStorage';
+
 import rootReducer from '../reducers';
 import rootSaga from '../sagas';
 
@@ -15,7 +17,7 @@ const sagaMiddleware = createSagaMiddleware();
 export let history = null;
 
 const enhancers = [];
-const middleware = [thunk, sagaMiddleware, gtmMiddleware];
+const middleware = [thunk, sagaMiddleware];
 
 if (typeof window !== 'undefined') {
   history = createBrowserHistory();

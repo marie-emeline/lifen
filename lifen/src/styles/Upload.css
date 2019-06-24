@@ -1,0 +1,137 @@
+.Upload {
+    height: 500px;
+}
+
+.Upload__actions {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    margin-left: 24px;
+    min-width: 300px;
+    color: grey;
+    margin-top:  50px;
+  }
+  
+  .Upload__action {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .Upload__input {
+    display: flex;
+    border: solid 2px grey;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .Upload__file-name {
+    max-width: 0;
+    padding: 11px 0;
+    font-size: 15px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: burlywood;
+  
+    transition: max-width 0.3s ease, padding 0.3s ease;
+  }
+  
+  .Upload__button {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    padding: 11px 16px;
+    color: grey;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+    cursor: pointer;
+  
+    transition: background-color 0.3s ease;
+  }
+
+  .Upload__button:hover  .Upload__button-label { 
+    color: white;
+  }
+
+  
+  .Upload__button:hover {
+    background-color: grey;
+  }
+  
+  .Upload__button .Icon {
+    margin-right: 8px;
+  }
+  
+  .Upload__button .Icon,
+  .Upload__button .Upload__button-label {
+    transition: opacity 0.3s ease;
+    transition-delay: 0.3s;
+  }
+  
+  .Upload__button-loader {
+    position: absolute;
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 2px solid grey;
+    border-right-color: transparent;
+    border-radius: 50%;
+    opacity: 0;
+  
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-name: rotate-forever;
+    animation-timing-function: linear;
+  
+    transition: opacity 0.5s ease;
+    transition-delay: 0s;
+  }
+  
+  .Upload__input-field {
+    display: none;
+  }
+  
+  .Upload__settings {
+    position: absolute;
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: italic;
+    top: 80px;
+    margin-top: 5px;
+    background-color: cadetblue;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .Upload__size, .Upload-number-binaries {
+    margin-top: 5px;
+  }
+
+  .Upload-spinner {
+    width: 20px;
+    height: 20px;
+    fill: cadetblue;
+    margin-top: 10px;
+  
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: rotate-forever;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes rotate-forever {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

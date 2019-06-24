@@ -1,18 +1,20 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import { Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router/immutable';
-import { Route } from 'react-router-dom';
+import store, { history } from './store';
 
-import App from './containers/App';
+import App from './App';
 
-import './styles/index.css';
+import './index.css';
 
+const target = document.querySelector('#root');
 
-const target = document.querySelector('#cms-root');
-
-render(
-    <ConnectedRouter>
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={history}>
       <Route component={App} />
-    </ConnectedRouter>
+    </Router>
+  </Provider>,
+  target,
 );

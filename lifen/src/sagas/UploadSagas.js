@@ -1,12 +1,11 @@
 import { put, call, takeLatest } from 'redux-saga/effects';
-s
 import * as UploadAPI from '../api/Upload';
 
 import {
   FETCH_UPLOAD__REQUEST,
   FETCH_UPLOAD__SUCCESS,
   FETCH_UPLOAD__FAIL,
-} from '../actions/UploadActions';
+} from '../actions/Upload';
 
 function* fetchUpload({ payload }) {
     console.log(payload);

@@ -6,7 +6,7 @@ export const FETCH_UPLOAD__FAIL =
 '@@APP/FETCH_UPLOAD__FAIL';
 
 
-export const fetchUpload = () => ({
+export const fetchUpload = file => ({
   type: FETCH_UPLOAD__REQUEST,
-  payload: null,
+  payload: file,
 });

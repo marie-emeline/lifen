@@ -1,10 +1,10 @@
-import { Map, fromJS, OrderedMap } from 'immutable';
+import { Map, fromJS } from 'immutable';
 
 import {
   FETCH_UPLOAD__REQUEST,
   FETCH_UPLOAD__SUCCESS,
   FETCH_UPLOAD__FAIL,
-} from '../actions/UploadActions';
+} from '../actions/Upload';
 
 const initialState = Map({
   binaries: Map({}),
